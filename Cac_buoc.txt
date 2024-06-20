@@ -1,0 +1,9 @@
+B1: composer i
+
+B2: Tạo mysql (xampp)
+
+B3: php artisan migrate
+
+B4: php artisan db:seed
+
+B5: php artisan serve

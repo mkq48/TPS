@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.content{
+    margin-top: 70px;
+}
+
+.dash-let {
+    height: 157px;
+    height: 100%; 
+}
+
+.dash-let span {
+    display: block;
+    color: #000;
+}
+
+.dash-let a {
+    text-decoration: none;
+}
+
+.dash-let .icon {
+    margin-top: 20px;
+    background-color: #FEAF00; 
+    color: #000; 
+    display: inline-block; 
+    width: 41px; 
+    height: 35px; 
+    text-align: center;
+}
+
+
+.col1{
+    background-color: #F0F9FF; 
+    margin: 15px; 
+    width: 255px; 
+    height: 157px;
+}
+
+
+.col2 {
+    background-color: #FEF6FB; 
+    margin: 15px; 
+    width: 255px;
+    height: 157px;
+}
+
+.col3 {
+    background-color: #FEFBEC; 
+    margin: 15px; 
+    width: 255px;
+    height: 157px;
+}
