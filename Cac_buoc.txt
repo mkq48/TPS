@@ -1,6 +1,6 @@
 B1: composer i
 
-B2: Tạo mysql (xampp)
+B2: Tạo mysql (xampp) - tps
 
 B3: php artisan migrate
 
