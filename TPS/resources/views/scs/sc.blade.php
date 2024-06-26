@@ -84,9 +84,9 @@
                 </td>
 
                 <td class="">
-                    <a href="{{ Route('scs.edit', $item)}}" class="text-decoration-none px-2 text-warning"><i class="bi bi-pencil"></i></a>
+                    <a href="{{ Route('scs.edit', $item)}}" class="text-decoration-none px-2 text-warning"><i class="bi bi-pencil-fill"></i></a>
                     <a href="#" class="text-decoration-none text-warning"  data-bs-toggle="modal" data-bs-target="#deleteModal{{ $item->Cinema_ID}}">
-                        <i class="bi bi-trash3"></i>
+                        <i class="bi bi-trash3-fill"></i>
                     </a>
             
                 </td>

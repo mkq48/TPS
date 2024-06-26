@@ -16,7 +16,7 @@
     <hr>
 
     <div class="row justify-content-center">
-        <form action="{{ route('films.update', $film) }}" class="form-control" style="width: 957px; height: 1100px;" method="POST">
+        <form action="{{ route('films.update', $film) }}" class="form-control" style="width: 957px; height: 1150px;" method="POST">
             @csrf
             @method('PUT')
             <div class="fo" style="padding: 10px 25px">
@@ -57,9 +57,11 @@
                     <label for="" style="padding: 10px 0;">Ngôn ngữ</label>
                     <select type="text" name="Language" id="Language" class="col-3 form-control" style="height: 36px; width: 100%; " value="{{$film->Language }}">
                         <option value="{{$film->Language }}">{{$film->Language }}</option>
-                        <option value="Việt Nam">Việt Nam</option>
-                        <option value="Tiếng Anh">Tiếng Anh</option>
-                        <option value="Tiếng Trung">Tiếng Trung</option>
+                        <option value="Tiếng Việt">Tiếng Việt</option>
+                        <option value="Tiếng Anh">Tiếng Anh - Phụ đề tiếng Việt</option>
+                        <option value="Tiếng Trung">Tiếng Trung - Phụ đề tiếng Việt</option>
+                        <option value="Tiếng Nhật">Tiếng Nhật - Phụ đề tiếng Việt</option>
+                        <option value="Tiếng Thái">Tiếng Thái - Phụ đề tiếng Việt</option>
                     </select>
                 </div>
 
@@ -78,7 +80,7 @@
 
                 <div class="row Name" style="display: flex; align-items: center; padding-top: 5px">
                     <label for="" style="padding: 10px 0;">Thể loại</label>
-                    <div class="row">
+                    <div class="row" style="height: 40px">
                         <div class="col-2">
                             <input class="form-check-input" type="radio" name="Category" id="Category1" value="Hành động" {{ $film->Category == 'Hành động' ? 'checked' : '' }}>
                             <label class="form-check-label" for="Category1">
@@ -92,6 +94,14 @@
                             <input class="form-check-input" type="radio" name="Category" id="Category2" value="Tình cảm" {{ $film->Category == 'Tình cảm' ? 'checked' : '' }}>
                             <label class="form-check-label" for="Category2">
                                 Tình cảm
+                            </label>
+
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-check-input" type="radio" name="Category" id="Category6" value="Gia đình" {{ $film->Category == 'Gia đình' ? 'checked' : '' }}>
+                            <label class="form-check-label" for="Category2">
+                                Gia đình
                             </label>
 
                         </div>
@@ -112,11 +122,22 @@
 
                         </div>
 
+                    </div>
+
+                    <div class="row" style="height: 40px">
 
                         <div class="col-2">
                             <input class="form-check-input" type="radio" name="Category" id="Category5" value="Kinh dị" {{ $film->Category == 'Kinh dị' ? 'checked' : '' }}>
                             <label class="form-check-label" for="Category5">
                                 Kinh dị
+                            </label>
+
+                        </div>
+
+                        <div class="col-2">
+                            <input class="form-check-input" type="radio" name="Category" id="Category5" value="Tâm lý" {{ $film->Category == 'Tâm lý' ? 'checked' : '' }}>
+                            <label class="form-check-label" for="Category7">
+                                Tâm lý
                             </label>
 
                         </div>

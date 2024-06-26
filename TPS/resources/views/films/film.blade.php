@@ -62,43 +62,43 @@
         </thead>
         <tbody>
             @foreach ($films as $item)
-            <tr>
+            <tr style="line-height: 48px">
 
-                <td class="">
-                    {{ $item->Film_Name}}
+                <td class="col col-3">
+                    {{ Str::limit($item->Film_Name, 30, '...') }}
                 </td>
     
-                <td class="">
-                    {{ $item->Director}}
+                <td class="col col-1">
+                    {{ Str::limit($item->Director, 10, '...') }}
                 </td>
     
-                <td class="">
-                    {{ $item->Category}}
+                <td class="col col-1">
+                    {{ Str::limit($item->Category, 10, '...') }}
                 </td>
                 
-                <td class="text-center">
+                <td class="text-center col col-1">
                     {{ $item->Age}}
                     <span>+</span>
                 </td>
     
     
-                <td class="">
+                <td class="col col-1">
                     {{ $item->Film_time}} 
                     <span>phút</span>
                 </td>
 
-                <td class="">
+                <td class="col col-1">
                     {{ $item->DOS}}
                 </td>
 
-                <td class="">
-                    {{ $item->Actor}}
+                <td class="col col-3">
+                    {{ Str::limit($item->Actor, 35, '...') }}
                 </td>
 
-                <td class="">
-                    <a href="{{ Route('films.edit', $item)}}" class="text-decoration-none px-2 text-warning"><i class="bi bi-pencil"></i></a>
+                <td class="col col-1">
+                    <a href="{{ Route('films.edit', $item)}}" class="text-decoration-none px-2 text-warning"><i class="bi bi-pencil-fill"></i></a>
                     <a href="#" class="text-decoration-none text-warning"  data-bs-toggle="modal" data-bs-target="#deleteModal{{ $item->Film_ID}}">
-                        <i class="bi bi-trash3"></i>
+                        <i class="bi bi-trash3-fill"></i>
                     </a>
             
                 </td>

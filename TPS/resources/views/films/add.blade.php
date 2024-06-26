@@ -16,7 +16,7 @@
     <hr>
 
     <div class="row justify-content-center">
-        <form action="{{ route('films.store') }}" class="form-control" style="width: 957px; height: 1100px;" method="POST">
+        <form action="{{ route('films.store') }}" class="form-control" style="width: 957px; height: 1150px;" method="POST">
             @csrf
             @method('POST')
 
@@ -58,9 +58,11 @@
                     <label for="" style="padding: 10px 0;">Ngôn ngữ</label>
                     <select type="text" name="Language" id="Language" class="col-3 form-control" style="height: 36px; width: 100%; " value="{{old('Language') }}">
                         <option value=""></option>
-                        <option value="Việt Nam">Việt Nam</option>
-                        <option value="Tiếng Anh">Tiếng Anh</option>
-                        <option value="Tiếng Trung">Tiếng Trung</option>
+                        <option value="Tiếng Việt">Tiếng Việt</option>
+                        <option value="Tiếng Anh">Tiếng Anh - Phụ đề tiếng Việt</option>
+                        <option value="Tiếng Trung">Tiếng Trung - Phụ đề tiếng Việt</option>
+                        <option value="Tiếng Nhật">Tiếng Nhật - Phụ đề tiếng Việt</option>
+                        <option value="Tiếng Thái">Tiếng Thái - Phụ đề tiếng Việt</option>
                     </select>
                 </div>
 
@@ -79,7 +81,7 @@
 
                 <div class="row Name" style="display: flex; align-items: center; padding-top: 5px">
                     <label for="" style="padding: 10px 0;">Thể loại</label>
-                    <div class="row">
+                    <div class="row" style="height: 40px">
                         <div class="col-2">
                             <input class="form-check-input" type="radio" name="Category" id="Category1" value="Hành động" {{ old('Category') == 'Hành động' ? 'checked' : '' }}>
                             <label class="form-check-label" for="Category1">
@@ -114,6 +116,10 @@
                         </div>
 
 
+                    </div>
+
+                    <div class="row" style="height: 40px">
+
                         <div class="col-2">
                             <input class="form-check-input" type="radio" name="Category" id="Category5" value="Kinh dị" {{ old('Category') == 'Kinh dị' ? 'checked' : '' }}>
                             <label class="form-check-label" for="Category5">
@@ -121,8 +127,15 @@
                             </label>
 
                         </div>
-                    </div>
 
+                        <div class="col-2">
+                            <input class="form-check-input" type="radio" name="Category" id="Category5" value="Tâm lý" {{ old('Category') == 'Tâm lý' ? 'checked' : '' }}>
+                            <label class="form-check-label" for="Category7">
+                                Tâm lý
+                            </label>
+
+                        </div>
+                    </div>
 
                     
                     
